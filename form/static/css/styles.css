@@ -1,0 +1,747 @@
+                                                /*  Шрифты подключение */
+@font-face {
+  font-family: "label_font"; /* Имя шрифта, которое будет использоваться для обращения к нему */
+  src: url("YandexSansDisplay-Light.ttf") format("truetype"); /* Укажите путь к файлу шрифта */
+}
+@font-face {
+  font-family: "up_but_font"; /* Имя шрифта, которое будет использоваться для обращения к нему */
+  src: url("YandexSansDisplay-Regular.ttf") format("truetype"); /* Укажите путь к файлу шрифта */
+}
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                      /*  Основное */
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+
+#formContainer {
+  display: none;
+  background-color: #343a40;
+  padding: 20px;
+  color: #ffffff;
+
+  height: 100%;
+  border-radius: 10px; /* Закругляем только нижний край      border-radius: 0 0 10px 10px;   */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+  /*margin: 0 ; */
+
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+#requestTextContainer {
+  margin-top: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*  легкую тень к тексту */
+  font-size: 15px;
+  font-family: "label_font" ;
+}
+
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+#permissionsContainer {
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                    /*  Верхняя шапка сайта */
+.rectangle-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0; /* Добавляем отступ сверху и снизу */
+}
+/* Скрываем черточку по умолчанию */
+.up_But::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid transparent;
+}
+
+/* Показываем черточку, когда кнопка активна (получает класс active) */
+.up_But.active::after {
+  border-color: #dc3545; /* Измените цвет черточки по желанию */
+  transition: border-color 0.3s ease; /* Анимация изменения цвета черточки */
+}
+
+/* Добавляем стиль, чтобы кнопки выглядели как простой текст */
+.up_But {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: black; /* Цвет текста кнопки */
+  text-decoration: none; /* Убираем подчеркивание текста */
+  margin: 0 20px; /* Добавляем отступы между кнопками */
+  padding: 0; /* Убираем отступы внутри кнопки */
+  transition: color 0.3s ease; /* Анимация изменения цвета текста */
+  font-family: "up_but_font"; /* Используем пользовательский шрифт */
+
+}
+
+/* Анимация при наведении */
+.up_But:hover {
+  color: #dc3545; /* Изменяем цвет текста на красный при наведении */
+}
+
+/* Анимация нажатия кнопки */
+.up_But:active {
+  color: #dc3545 !important; /* Изменяем цвет текста на красный при нажатии */
+  transition: color 0.3s ease !important; /* Анимация изменения цвета текста */
+}
+
+/* Стиль для активной кнопки */
+.up_But.active {
+  color: #dc3545; /* Изменяем цвет текста на красный для активной кнопки */
+}
+
+
+
+
+
+
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                          /*  Стили кнопок */
+button{
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+
+
+/* Кнопка отправить */
+.main_but {
+  font-size: 16px;
+  color: white;
+  background-color: #dc3545;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  /* Добавляем переход для плавной анимации */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+                                                /* Стили для кнопки при наведении курсора */
+.main_but:hover {
+  /* Изменяем фоновый цвет на прозрачный */
+  background-color: transparent;
+  /* Изменяем цвет контуров на цвет фона (белый в данном случае) */
+  border-color: #dc3545;
+  /* Изменяем цвет текста на цвет фона (белый в данном случае) */
+  color: #dc3545;
+}
+
+.main_but:active {
+  background-color: #dc3545;
+  border-color: white;
+  color: white;
+}
+
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                  /*  Стили контейнеров */
+
+body #monitorSizeContainer{
+  height: 85px;
+}
+
+body #computerTypeContainer{
+  height: 85px;
+}
+
+body #storageTypeContainer{
+  height: 85px;
+}
+
+
+
+
+body #processorTypeContainer{
+  height: 55px;
+  display: flex;
+  gap: 20px;
+  align-items: center
+
+}
+
+body #processorNoteContainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+body #hddMemorySizeContainer{
+  width: 400px;
+
+}
+
+body #ssdMemorySizeContainer{
+  width: 400px;
+
+}
+
+body #memoryFieldContainer{
+
+  display: flex;
+  height: 80px;
+  display: none;
+}
+
+
+ #graphicsCardContainer{
+  height: 60px;
+  position: relative; /* Добавляем позиционирование для иконки */
+  display: flex; /* Используем flexbox */
+  align-items: center;
+}
+
+#keyboardContainer{
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+}
+
+ #mouseContainer{
+   width: 500px;
+   position: absolute;
+   display: flex;
+   align-items: center;
+   margin-left: 524px;
+ }
+
+#keyboardContainerandMouseContainer{
+    display: flex;
+    height: 70px;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#dateContainer{
+    height: 55px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+#permissionsContainer{
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly;*/
+    justify-content:space-between;
+    align-content: flex-start;
+}
+
+#folderSelectContainer{
+    height: 55px;
+}
+
+#FIO_Cont{
+    height: 45px;
+}
+#Position_work_container{
+    height: 45px;
+}
+
+
+
+#TechTypeContainer{
+    height: 85px;
+    align-items: center;
+    margin-left: 10px;
+
+}
+#optionFields{
+    transform: translateX(20px);
+}
+
+#MainSelectCont{
+
+}
+
+
+
+#cheks_opt_mfu{
+    height: 120px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#checks_cont{
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+
+
+#mfu_developers_cont{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    gap: 10px;
+}
+
+#model_mfu_cont{
+    width: 450px;
+    align-items: center;
+    display: flex;
+    margin-left: 30px;
+    height: 60px;
+}
+
+#select_and_text{
+    display: flex;
+}
+
+
+
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                   /*  Стиль Input */
+
+/* Общий стиль для текстового поля input */
+ input[type="text"] {
+  /* Установка общих свойств для текстового поля */
+  margin-left: 10px;
+  box-sizing: border-box;
+  width: 270px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  height: 32px;
+}
+
+/* Стиль иконки */
+ .input-icon {
+  font-size: 18px;
+  color: #999;
+  pointer-events: none; /* Запрещаем события на иконке, чтобы она не мешала вводу */
+  margin-left: 10px; /* Добавляем небольшой отступ между текстовым полем и иконкой */
+   transform: translateX(-35px);
+}
+
+/* Стиль иконки, когда поле в фокусе */
+ input[type="text"]:focus + .input-icon {
+  display: none; /* Скрываем иконку, когда поле в фокусе */
+}
+
+
+/* Анимация тени при наведении курсора */
+input[type="text"] {
+  /* Установка общих свойств для текстового поля */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Начальное состояние тени */
+  transition: box-shadow 0.3s ease; /* Добавляем анимацию на свойство box-shadow */
+}
+
+input[type="text"]:hover {
+  transition-delay: 0.1s;
+  box-shadow: 0 0 10px rgba(243, 145, 165, 0.5); /* Конечное состояние тени при наведении */
+}
+
+
+/* Если есть ошибка, подсвечиваем рамку красным */
+ input[type="text"].error {
+  border-color: #ff6060;
+}
+
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                   /*  Стиль для checkbox */
+
+.toggle {
+	align-items: center;
+	border-radius: 100px;
+	display: flex;
+
+	margin-bottom: 16px;
+}
+
+.toggle:last-of-type {
+	margin: 0;
+}
+
+/* Since we can't style the checkbox directly, we "hide" it so we can draw the toggle. */
+.toggle__input {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* This style sets the focus ring. The ":not([disabled])" prevents the focus ring from creating a flash when the element is clicked. */
+.toggle__input:not([disabled]):active + .toggle-track,
+.toggle__input:not([disabled]):focus + .toggle-track {
+	border: 1px solid transparent;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.toggle__input:disabled + .toggle-track {
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+.toggle label {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*  легкую тень к тексту */
+  font-size: 15px;
+  font-family: "label_font" ;
+}
+
+.toggle-track {
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	border-radius: 100px;
+	cursor: pointer;
+	display: flex;
+	height: 20px; /* Replace with actual height value */
+	margin-right: 12px;
+	position: relative;
+	width: 40px; /* Replace with actual width value */
+}
+
+.toggle-indicator {
+	align-items: center;
+	background: #343a40; /* Replace with actual color value */
+	border-radius: 10px; /* Replace with actual border-radius value */
+	bottom: 2px;
+	display: flex;
+	height: 16px; /* Replace with actual height value */
+	justify-content: center;
+	left: 2px;
+	outline: none; /* Replace with actual outline value */
+	position: absolute;
+	transition: 0.3s; /* Replace with actual transition value */
+	width: 16px; /* Replace with actual width value */
+
+}
+
+/* The check mark is optional */
+.checkMark {
+	fill: #fff;
+	height: 15px; /* Replace with actual height value */
+	width: 12px; /* Replace with actual width value */
+	opacity: 0;
+	transition: 0.3s; /* Replace with actual transition value */
+
+}
+
+.toggle__input:checked + .toggle-track .toggle-indicator {
+	 background-color: #dc3545; /* Replace with actual color value */
+	transform: translateX(20px); /* Replace with actual translation value */
+}
+
+/* The check mark is optional */
+.toggle__input:checked + .toggle-track .toggle-indicator .checkMark {
+	opacity: 1;
+	transition: 0.3s; /* Replace with actual transition value */
+}
+
+
+@media screen and (-ms-high-contrast: active) {
+	.toggle-track {
+		border-radius: 0;
+	}
+}
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                   /*  Стиль для Date */
+
+
+input[type="date"]{
+    background-color: #dc3545;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+/* Стиль для иконки календаря внутри поля выбора даты */
+::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+
+}
+
+/* Изменения при наведении на иконку календаря */
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  color: #FFFFFF;
+  box-shadow: 0 0 30px rgba(243, 145, 165, 0.7);
+}
+
+/* Изменения при нажатии на иконку календаря */
+input[type="date"]:active::-webkit-calendar-picker-indicator {
+  background-color: transparent;
+  animation: none;
+}
+
+
+
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                   /*  Стиль для TextArea */
+
+
+
+textarea {
+    resize: none;
+}
+
+textarea.auto {
+    overflow-y: hidden;
+}
+
+/* Some styles */
+textarea {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Inter';
+    line-height: 22px;
+    padding: 16px 20px;
+
+    color: #404660;
+    border: none;
+    background: #fff;
+    transition: box-shadow .25s;
+    box-shadow: inset 0 0 0 1px var(--border-color, #E1E6F9), 0 0 0 3px var(--focus-color, transparent);
+}
+
+textarea:focus {
+    --focus-color: #ECEFFC;
+}
+
+textarea:focus,
+textarea:hover {
+    --border-color: #BBC1E1;
+}
+
+
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                              /*  Стиль списков выпадающих обычных */
+.custom-select {
+  position: relative;
+  width: 350px;
+  background-color: white;
+  color: #555555;
+  height: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-select.active {
+  background-color: #c9c8c8;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.custom-select .selected-option {
+  position: relative;
+  z-index: 1;
+}
+
+/* Styles for the dropdown options */
+.custom-select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: opacity 0.3s ease;
+}
+
+.custom-select.active .options {
+  display: block;
+  opacity: 1;
+}
+
+.custom-select .options li {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f391a566;
+}
+
+.custom-select .options li:hover {
+  background-color: #fff4dd;
+}
+
+/* Down-arrow icon */
+.custom-select .arrow {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #555555;
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+
+/* Flip the arrow when the select box is active */
+.custom-select.active .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+/*  0 */
+                                                /*  Стиль списков  горизонтальных */
+
+.custom-select2 {
+    display: flex;
+    align-items: center;
+}
+
+.selected-option2 {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.options2 {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options2 li {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.options2 li:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+.horizontal-options {
+    display: flex;
+    list-style-type: none;
+}

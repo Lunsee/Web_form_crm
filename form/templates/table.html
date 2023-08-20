@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Форма</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="rectangle-container">
+    <div class="button-container">
+        <button class="up_But" id="showFormButton">Форма запросов</button>
+        <button class="up_But" id="button_techsupport">Техподдержка</button>
+        <button class="up_But" id="button_interfaces">Все заявки</button>
+    </div>
+  </div>
+  <div id="formContainer" class="hidden">
+    <form id="myForm" method="POST" action="/api/">
+      {% csrf_token %}
+    <div id="MainSelectCont">
+        <label  for="selectOption">Выберите действие:</label>
+        <div class="custom-select" tabindex="0">
+            <div class="selected-option" id="customSelectOption_main" name = "customSelectOption_main" data-value="">Выберите...</div>
+             <div class="arrow"></div>
+            <ul class="options">
+                <li data-value="tech_org">Техника</li>
+                <li data-value="new_org">Создание нового рабочего места</li>
+                <li data-value="add_rights">Редактирование прав к корпоративным ресурсам</li>
+                <li data-value="bitrix">Доработки Битрикс</li>
+                <li data-value="1c">Доработки 1С</li>
+            </ul>
+             <select id="customSelectOption_main_select" name="customSelectOption_main" style="display:none;"></select>
+        </div>
+    </div>
+      <br><br>
+      <div id="MainFieldOpt"></div> <!-- Поле с опциями -->
+      <div id="optionFields"></div> <!-- Поле с опциями -->
+      <br>
+
+      <div id="processorNoteContainer"></div> <!-- Контейнер для примечания для процессора -->
+      <div id="softwareTypeContainer1"></div>
+      <div id="softwareTypeContainer2"></div>
+
+      <div id="requestTextContainer">
+        <label for="requestText">Текст заявки:</label>   <!-- Поле текста заявки -->
+        <textarea id="requestText" name="letters"></textarea>
+      </div>
+      <div id="dateContainer">                               <!-- Поле Даты -->
+        <input type="date" id="desiredDate" name="desiredDate">
+        <label for="desiredDate">Желаемая дата:</label>
+      </div>
+      <br>
+      <input class = "main_but" type="submit" value="Отправить">
+    </form>
+  </div>
+  <script src="{% static 'js/jquery-3.7.0.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
